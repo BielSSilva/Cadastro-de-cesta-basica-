@@ -1,11 +1,11 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk            # bibliotecas importadas 
 from tkinter import filedialog
 from tkinter import messagebox
 from fpdf import FPDF
 
 class Funcionario:
-    def __init__(self, nome, cpf, cargo):
+    def __init__(self, nome, cpf, cargo): # classe funcionario com seus atributos 
         self.nome = nome
         self.cpf = cpf
         self.cargo = cargo
@@ -90,7 +90,7 @@ class ControleCestasBasicas:
 
         self.entry_quantidade.delete(0, tk.END)
 
-    def salvar_pdf(self):
+    def salvar_pdf(self): # salvaa pdf 
         pdf = FPDF()
         pdf.set_auto_page_break(auto=True, margin=15)
         pdf.add_page()
